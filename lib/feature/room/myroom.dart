@@ -210,7 +210,6 @@ class _MyRoomScreenState extends State<MyRoomScreen> {
                                 }).toList(),
                               ),
                               SizedBox(height: 8),
-                              // عرض الأدوات
                               Wrap(
                                 children: tools.map<Widget>((tool) {
                                   return Container(

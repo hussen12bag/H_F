@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:hotel_finde_hotel/core/storage/shared/shared_pref.dart';
+import 'package:hotel_finde_hotel/core/widget/button/main_app_button.dart';
+import 'package:hotel_finde_hotel/router/router.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../core/resource/color_manager.dart';
@@ -135,6 +137,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
           _buildReadOnlyField('Location', profileData['location_desc']),
           SizedBox(height: AppHeightManager.h2point5),
           _buildReadOnlyField('Description', profileData['desc']),
+          Center(
+            child: MainAppButton(
+              onTap: () {
+                AppSharedPreferences.clear();
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    RouteNamedScreens.login, (route) => false);
+              },
+              color: AppColorManager.blackShadow,
+              height: AppWidthManager.w8,
+              width: AppWidthManager.w8,
+              child: const Icon(
+                Icons.logout,
+                size: 15,
+                color: AppColorManager.white,
+              ),
+            ),
+          ),
         ],
       ),
     );

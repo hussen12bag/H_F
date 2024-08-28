@@ -72,7 +72,7 @@ class _AddRoomScreenState extends State<AddRoomScreen> {
       return;
     }
 
-    final uri = Uri.parse('http://192.168.1.112:8000/api/addRoom');
+    final uri = Uri.parse('http://192.168.62.219:8000/api/addRoom');
     final request = http.MultipartRequest('POST', uri)
       ..fields['name'] = nameController.text
       ..fields['desc'] = descController.text

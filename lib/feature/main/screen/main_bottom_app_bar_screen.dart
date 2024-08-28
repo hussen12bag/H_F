@@ -105,7 +105,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                                     : AppColorManager.grey,
                                 BlendMode.srcIn)),
                         AppTextWidget(
-                          text: "M",
+                          text: "My Room",
                           color: _selectedIndex == 1
                               ? AppColorManager.white
                               : AppColorManager.grey,
